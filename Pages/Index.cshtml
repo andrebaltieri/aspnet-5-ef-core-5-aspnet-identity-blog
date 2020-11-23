@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<ul>
+    @foreach (var post in Model.Posts)
+    {
+        <li>
+            <a asp-area="" asp-page="PostDetails" asp-route-url="@post.Url">
+                @post.Title
+            </a>
+        </li>
+    }
+</ul>

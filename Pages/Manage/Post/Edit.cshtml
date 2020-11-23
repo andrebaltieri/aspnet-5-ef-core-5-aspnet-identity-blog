@@ -1,0 +1,40 @@
+@page "~/admin/posts/edit/{id}"
+@model MyBlog.Pages.Manage.Post.EditModel
+
+<h4>Post</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Post.Id"/>
+            <div class="form-group">
+                <label asp-for="Post.Title" class="control-label"></label>
+                <input asp-for="Post.Title" class="form-control"/>
+                <span asp-validation-for="Post.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.Url" class="control-label"></label>
+                <input asp-for="Post.Url" class="form-control"/>
+                <span asp-validation-for="Post.Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.Date" class="control-label"></label>
+                <input asp-for="Post.Date" class="form-control"/>
+                <span asp-validation-for="Post.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.Body" class="control-label"></label>
+                <input asp-for="Post.Body" class="form-control"/>
+                <span asp-validation-for="Post.Body" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>

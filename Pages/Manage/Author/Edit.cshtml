@@ -1,0 +1,30 @@
+@page "~/admin/authors/edit"
+@model MyBlog.Pages.Manage.Author.EditModel
+
+<h4>Author</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Author.Id"/>
+            <div class="form-group">
+                <label asp-for="Author.Name" class="control-label"></label>
+                <input asp-for="Author.Name" class="form-control"/>
+                <span asp-validation-for="Author.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Author.Email" class="control-label"></label>
+                <input asp-for="Author.Email" class="form-control"/>
+                <span asp-validation-for="Author.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>

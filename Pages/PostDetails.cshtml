@@ -1,0 +1,10 @@
+@page "~/blog/{url}"
+@model MyBlog.Pages.PostDetails
+
+<h1>@Model.Post.Title</h1>
+<p>
+    Publicado em @Model.Post.Date.ToString("dd/MM/yyyy") por <strong>@Model.Post.Author.Name</strong>
+</p>
+<div>
+    @Html.Raw(Model.Post.Body)
+</div>
