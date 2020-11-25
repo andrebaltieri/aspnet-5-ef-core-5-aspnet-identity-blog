@@ -12,6 +12,6 @@ namespace MyBlog.Models
         [Required(ErrorMessage = "E-mail obrigatório")]
         [EmailAddress(ErrorMessage = "E-mail inválido")]
         public string Email { get; set; }
-        public ICollection<Post> Posts { get; set; }
+        //public ICollection<Post> Posts { get; set; }
     }
 }
